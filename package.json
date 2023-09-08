@@ -1,0 +1,14 @@
+{
+  "name": "finalTry",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "hardhat": "^2.17.2"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.1.0",
+    "@openzeppelin/hardhat-upgrades": "^2.2.1"
+  }
+}
