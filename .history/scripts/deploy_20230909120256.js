@@ -1,6 +1,5 @@
 const { ethers } = require("hardhat");
 const { upgrades } = require("hardhat");
-const { getImplementationAddress } = require("@openzeppelin/upgrades-core");
 
 async function main() {
   const myToken = await ethers.getContractFactory("MyToken");
@@ -9,21 +8,13 @@ async function main() {
     initializer: "createToken",
   });
   console.log(token);
-  const provider = ethers.provider;
-  console.log(token.runner.address, " token(proxy) address");
-  const currentImplAddress = await getImplementationAddress(
-    provider,
-    token.runner.address
-  );
+  console.log(token.address, " token(proxy) address");
   console.log(
-    currentImplAddress,
-
+    await upgrades.erc1967.getImplementationAddress(token.address),
     " getImplementationAddress"
   );
-
-  console.log("1");
   console.log(
-    await upgrades.erc1967.getAdminAddress(token.runner.address),
+    await upgrades.erc1967.getAdminAddress(token.address),
     " getAdminAddress"
   );
 }

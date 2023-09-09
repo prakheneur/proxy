@@ -4,11 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "ethers": "^6.7.1",
     "hardhat": "^2.17.2"
   },
   "dependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-verify": "^1.1.0",
-    "@openzeppelin/hardhat-upgrades": "^2.2.1"
+    "@openzeppelin/hardhat-upgrades": "^2.2.1",
+    "@openzeppelin/upgrades-core": "^1.28.0"
   }
 }

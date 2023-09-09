@@ -13,8 +13,9 @@ async function main() {
   console.log(token.runner.address, " token(proxy) address");
   const currentImplAddress = await getImplementationAddress(
     provider,
-    token.runner.address
+    proxyAddress
   );
+  console.log(currentImplAddress);
   console.log(
     currentImplAddress,
 

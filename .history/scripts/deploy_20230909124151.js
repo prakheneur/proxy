@@ -15,6 +15,7 @@ async function main() {
     provider,
     token.runner.address
   );
+  console.log(currentImplAddress);
   console.log(
     currentImplAddress,
 
